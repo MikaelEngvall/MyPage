@@ -205,10 +205,10 @@ footer p {
 }
 .social-icons a {
     color: white; /* Vita ikoner */
-    margin: 10px;
+    margin: 0px;
     text-decoration: none;
     display: inline-block;
-            transition: transform 0.2s ease-in-out; /* Mjuk övergång */
+    transition: transform 0.2s ease-in-out; /* Mjuk övergång */
 }
 .social-icons a:hover {
     color: #ccc; /* Iconen blir ljusgrå*/
@@ -218,9 +218,9 @@ footer p {
 /* Bounce Animation */
 @keyframes bounce {
     0%, 100% {
-        transform: translateY(0); /* Börjar och slutar på samma position*/
+        transform: translateY(0); /* Börjar och slutar på samma position i y-led*/
     }
     50% {
-        transform: translateY(-10px); /* Går up 10px */
+        transform: translateY(-5px); /* Stiger 5px (5ps får den att sjunka 5px) */
     }
 }
