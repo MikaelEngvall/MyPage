@@ -1,0 +1,58 @@
+<div class="typewriter">
+    <h1><span>The </span><span class="word"></span><span> and the hat.</span></h1>
+</div>
+
+<style>
+    /* GLOBAL STYLES */
+    body {
+      background: #333;
+      padding-top: 5em;
+      display: flex;
+      justify-content: center;
+    }
+
+    /* DEMO-SPECIFIC STYLES */
+    .typewriter h1 {
+      color: #fff;
+      font-family: monospace;
+      overflow: hidden; /* Ensures the content is not revealed until the animation */
+      white-space: nowrap; /* Keeps the content on a single line */
+      margin: 0 auto; /* Centers the text */
+      letter-spacing: .15em; /* Adjust as needed */
+      border-right: .15em solid orange; /* The typewriter cursor */
+    }
+
+    /* Typing effect for the whole sentence */
+    @keyframes typing {
+      0% { width: 0; }
+      40% { width: 27ch; }         /* Full sentence typed */
+      60% { width: 27ch; }         /* Hold the full sentence for a moment */
+      61% { width: 0; }            /* Instantly clear the sentence */
+      100% { width: 0; }           /* Wait before starting the next cycle */
+    }
+
+    /* Blink animation for the caret */
+    @keyframes blink-caret {
+      from, to { border-color: transparent; }
+      50% { border-color: orange; }
+    }
+
+    /* Full typing and resetting animation */
+    .typewriter h1 {
+      animation: typing 6s steps(27, end) infinite, blink-caret .75s step-end infinite;
+      width: 27ch; /* Set width to fit the full sentence */
+    }
+
+    /* Word-changing animation */
+    @keyframes changeWord {
+      0%, 33% { content: 'cat'; }
+      34%, 66% { content: 'rat'; }
+      67%, 100% { content: 'bat'; }
+    }
+
+    /* Word changes after each full sentence, synced with typing */
+    .word::before {
+      content: 'cat'; /* Initial word */
+      animation: changeWord 18s steps(1) infinite; /* Change word every 6s (3 full sentences) */
+    }
+</style>

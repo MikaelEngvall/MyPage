@@ -56,6 +56,9 @@ nav {
   display: inline-block;
   vertical-align: middle;
   font-size: 40px;
+  background-size: cover;           /* Ensures the image covers the div */
+  background-position: center;      /* Centers the image */
+  background-repeat: no-repeat;
 }
 
 header {
@@ -184,6 +187,9 @@ main {
   height: 300px;
   color: #dce2b8;
   background-image: url("https://png.pngtree.com/background/20230522/original/pngtree-lemons-on-a-tree-in-a-field-picture-image_2694317.jpg");
+  background-size: cover;           /* Ensures the image covers the div */
+  background-position: center;      /* Centers the image */
+  background-repeat: no-repeat;
 }
 
 .icons-down {
@@ -238,27 +244,27 @@ footer {
         wszystkie posty razem i archiwum musza byc w osobnych   divach i ustawione jako row na poczatku i column przy tym
         brytpunkcie */
 
-/* Extra small devices (phones, 600px and down) */
+/* Extra small devices (phones, 600px and down) 
 @media only screen and (max-width: 600px) {
   ...;
 }
 
-/* Small devices (portrait tablets and large phones, 600px and up) */
+/* Small devices (portrait tablets and large phones, 600px and up) 
 @media only screen and (min-width: 600px) {
   ...;
 }
 
-/* Medium devices (landscape tablets, 768px and up) */
+/* Medium devices (landscape tablets, 768px and up) 
 @media only screen and (min-width: 768px) {
   ...;
 }
 
-/* Large devices (laptops/desktops, 992px and up) */
+/* Large devices (laptops/desktops, 992px and up) 
 @media only screen and (min-width: 992px) {
   ...;
 }
 
-/* Extra large devices (large laptops and desktops, 1200px and up) */
+/* Extra large devices (large laptops and desktops, 1200px and up) 
 @media only screen and (min-width: 1200px) {
   ...;
-}
+} */
