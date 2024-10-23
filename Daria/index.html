@@ -46,15 +46,23 @@
         <!------------------------------>
       </nav>
       <header class="meny">
-        <a class="meny-text" href="#">Home</a>
+        <a class="meny-text" href="https://darjurek.github.io/">Home</a>
         <a class="meny-text" href="#">About</a>
         <a class="meny-text" href="#">Contact</a>
-        <!--- class="menu-bars"-->
-        <a href="#" class="menu-bars">
-          <i class="fa fa-bars"></i>
-        </a>
       </header>
-      <!-------------     dolozyc animacje z obrazem ---------------------------->
+
+      <div id="mySidebar" class="sidebar">
+        <br />
+        <br />
+        <a href="https://darjurek.github.io/">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+      </div>
+
+      <div id="main">
+        <button class="openbtn" id="menuBtn" onclick="toggleNav()">☰</button>
+      </div>
+
       <header class="welcome">
         <p class="text-welcome line-1 anim-typewriter">
           A perfect lemon every day!
@@ -230,6 +238,8 @@
           />
         </button>
         <input type="text" class="input-search" />
+        <br />
+        <br />
       </div>
     </div>
     <!--   nad footerem     -->
@@ -241,16 +251,18 @@
       <!-------------------------->
       <div class="icons-down">
         <a class="icons-separate" href="https://www.facebook.com/"
-          ><img id="image-icon" src="images/icons8-facebook-light.svg"
+          ><img id="image-icon" src="images/icons8-facebook.svg"
         /></a>
         <a class="icons-separate" href="https://www.instagram.com/"
-          ><img id="image-icon" src="images/icons8-instagram-light.svg"
+          ><img id="image-icon" src="images/icons8-instagram.svg"
         /></a>
         <a class="icons-separate" href="https://www.linkedin.com"
-          ><img id="image-icon" src="images/icons8-linkedin-light.svg"
+          ><img id="image-icon" src="images/icons8-linkedin.svg"
         /></a>
-        <a class="icons-separate" href="https://www.x.com"
-          ><img id="image-icon" src="images/icons8-spotify-light.svg"
+        <a
+          class="icons-separate"
+          href="https://open.spotify.com/track/2epbL7s3RFV81K5UhTgZje"
+          ><img id="image-icon" src="images/icons8-spotify.svg"
         /></a>
       </div>
       <!--------------------------->
@@ -296,5 +308,20 @@
 
       <p style="color: #dce2b8">&#169; Lemonified 2024</p>
     </footer>
+
+    <script>
+      let isOpen = false; // Variable to track sidebar state
+
+      function toggleNav() {
+        if (isOpen) {
+          document.getElementById("mySidebar").style.height = "50px"; // Collapse menu
+          document.getElementById("menuBtn").innerHTML = "☰"; // Change icon to hamburger
+        } else {
+          document.getElementById("mySidebar").style.height = "200px"; // Expand menu
+          document.getElementById("menuBtn").innerHTML = "×"; // Change icon to 'X'
+        }
+        isOpen = !isOpen; // Toggle the state
+      }
+    </script>
   </body>
 </html>
